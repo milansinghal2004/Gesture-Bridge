@@ -1,4 +1,3 @@
-# AirCanvas
 AirCanvas is a computer vision project that lets you draw using hand gestures. Built with OpenCV and MediaPipe, it tracks your hand movements to simulate basic painting—like MS Paint, but without a mouse.
 
 ## About
@@ -20,7 +19,7 @@ The project demonstrates how computer vision can be used to create natural human
 ### Setup
 1. Clone the repository:
    ```
-   git clone https://github.com/d4min/aircanvas.git
+   git clone https://github.com/milansinghal2004/Gesture-Bridge
    cd aircanvas
    ```
 
@@ -84,9 +83,6 @@ AirCanvas includes an audio recognition feature that allows you to control the a
 
 The audio recognition runs in a separate thread, allowing it to listen for commands continuously while you draw.
 
-#### Contributor Acknowledgment
-Special thanks to [@AlexCaranha](https://github.com/AlexCaranha) for implementing the speech recognition functionality.
-
 ## Implementation Progress
 
 ### Phase 1: Setup ✅
@@ -112,7 +108,6 @@ Special thanks to [@AlexCaranha](https://github.com/AlexCaranha) for implementin
 - [x] Color system
 
 ### Phase 5: Features 🔄
-- [x] Audio commands
 - [ ] Tool panel
 - [ ] Save/Load system
 - [ ] Shapes e.g. Rectangle, Circle
