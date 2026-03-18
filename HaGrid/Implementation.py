@@ -4,6 +4,7 @@ from collections import deque
 from statistics import mode
 import mediapipe as mp
 import pickle
+import os
 
 
 # # Normalize landmarks exactly as done in training:
@@ -59,9 +60,9 @@ hands = mp_hands.Hands(
 # In[8]:
 
 
-with open('C:/Users/singh/Documents/.vscode/Gesture Bridge/Hagrid/best_model.pkl', 'rb') as f:
+with open(os.path.join(os.path.dirname(__file__), 'best_model.pkl'), 'rb') as f:
     model = pickle.load(f)
-with open('C:/Users/singh/Documents/.vscode/Gesture Bridge/Hagrid/label_encoder.pkl', 'rb') as f:
+with open(os.path.join(os.path.dirname(__file__), 'label_encoder.pkl'), 'rb') as f:
     le = pickle.load(f)
 
 

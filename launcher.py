@@ -12,12 +12,16 @@ def run_script(script_path):
 # Callbacks
 def detect_options():
     clear_frame()
-    tk.Button(root, text="Words", command=lambda: run_script("C:/Users/singh/Documents/.vscode/Gesture Bridge/Hagrid/Implementation.py")).pack(pady=10)
-    tk.Button(root, text="Alphabets", command=lambda: run_script("C:/Users/singh/Documents/.vscode/Gesture Bridge/button.py")).pack(pady=10)
+    # Corrected relative paths to run regardless of exact clone path
+    base_path = os.path.dirname(os.path.abspath(__file__))
+    tk.Button(root, text="Words", command=lambda: run_script(os.path.join(base_path, "HaGrid", "Implementation.py"))).pack(pady=10)
+    tk.Button(root, text="Alphabets", command=lambda: run_script(os.path.join(base_path, "button.py"))).pack(pady=10)
     tk.Button(root, text="Back", command=init_main_window).pack(pady=10)
 
 def draw():
-    run_script("C:/Users/singh/Documents/.vscode/GESTURE BRIDGE/AirCanvas/aircanvas/src/main1.py")
+    base_path = os.path.dirname(os.path.abspath(__file__))
+    # The actual folder in the repo is AirCanvas/src/main1.py
+    run_script(os.path.join(base_path, "AirCanvas", "src", "main1.py"))
 
 # UI Initialization
 def init_main_window():
